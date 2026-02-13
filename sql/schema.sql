@@ -3,12 +3,12 @@ USE cafe_sales;
 
 CREATE TABLE dim_items (
     item_id INT AUTO_INCREMENT PRIMARY KEY,
-    itme_name VARCHAR(100) NOT NULL,
+    item_name VARCHAR(100) NOT NULL,
     is_active BOOL DEFAULT TRUE
 );
 
 CREATE TABLE fact_sales (
-    transaction_id INT NOT NULL PRIMARY KEY, 
+    transaction_id VARCHAR(20) NOT NULL PRIMARY KEY, 
     transaction_date DATE,
     item_id INT,
     quantity INT,
